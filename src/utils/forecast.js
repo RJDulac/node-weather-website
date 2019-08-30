@@ -13,11 +13,11 @@ const forecast = (latitude, longitude, callback) => {
         undefined,
         `${daily.data[0].summary} It is currently ${
           currently.temperature
-        } degrees out. There is a ${
-          currently.precipProbability
-        }% chance of rain.
-        Feels like ${
-          currently.apparentTemperature
+        } degrees out There is a ${currently.precipProbability}% chance of rain.
+        Feels like ${currently.apparentTemperature}. Today's high is ${
+          daily.data[0].temperatureHigh
+        } with a low of ${
+          daily.data[0].temperatureLow
         }. Humidty is ${currently.humidity * 100}%. Wind speed is ${
           currently.windSpeed
         } mph.`
